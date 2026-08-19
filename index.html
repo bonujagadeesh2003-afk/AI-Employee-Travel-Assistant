@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Employee Travel Assistant</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #222;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #result {
+            display: none;
+            margin-top: 25px;
+            padding: 15px;
+            background: #f1f5f9;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Employee Travel Assistant</h1>
+
+    <p class="subtitle">
+        Enter your travel details to generate a travel brief
+    </p>
+
+    <form
+        id="travelForm"
+        method="POST"
+        action="https://arbiter-prod-ce.cloud.automationanywhere.digital/webhook/incoming/3wo3xib5YAK5mY5FH87Z3SoXM3RgLwYVlx5oHR6O7SdXV6Rc5FmkVbP3YvO5GEYBJMeX3G5E6krxVTuyZvtTibuB3uRVgplhJYdVNDwWYP56voUOCSXYOpDfOFRsxkpF"
+    >
+
+        <!-- Employee Name -->
+        <label for="employeeName">
+            Employee Name
+        </label>
+
+        <input
+            type="text"
+            id="employeeName"
+            name="employeeName"
+            placeholder="Enter employee name"
+            required
+        >
+
+
+        <!-- Destination -->
+        <label for="destination">
+            Destination
+        </label>
+
+        <input
+            type="text"
+            id="destination"
+            name="destination"
+            placeholder="Example: Ahmedabad"
+            required
+        >
+
+
+        <!-- Travel Date -->
+        <label for="travelDate">
+            Travel Date
+        </label>
+
+        <input
+            type="date"
+            id="travelDate"
+            name="travelDate"
+            required
+        >
+
+
+        <!-- Travel Purpose -->
+        <label for="travelPurpose">
+            Purpose
+        </label>
+
+        <select
+            id="travelPurpose"
+            name="travelPurpose"
+            required
+        >
+            <option value="">Select purpose</option>
+
+            <option value="Business Meeting">
+                Business Meeting
+            </option>
+
+            <option value="Client Meeting">
+                Client Meeting
+            </option>
+
+            <option value="Training">
+                Training
+            </option>
+
+            <option value="Conference">
+                Conference
+            </option>
+
+            <option value="Site Visit">
+                Site Visit
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+        </select>
+
+
+        <!-- Submit -->
+        <button type="submit">
+            Generate Travel Brief
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
